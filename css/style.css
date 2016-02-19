@@ -1,0 +1,18 @@
+/*
+ *   Author: Methew Guda
+ *   Author ID: A00381751
+ *   Dedsription: Electricity Computation
+ *   Date: 12-02-2016
+ */
+
+.header,
+.footer {
+	text-align: center;
+
+}
+
+table, tr, td, th{
+	text-align: center;
+	border: 1px solid black;
+    border-collapse: collapse;
+}
