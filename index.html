@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<!--
+    Author: Methew Guda
+    Author ID: A00381751
+    Dedsription: Electricity Computation
+    Date: 12-02-2016
+-->
+
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Electricity Calculator</title>
+		<!-- Include meta tag to ensure proper rendering and touch zooming -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Include jQuery Mobile stylesheet -->
+		<link type="text/css" rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+		<!-- Include custome stylesheets -->
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<!-- Include the jQuery library -->
+		<script type="text/javascript" src="scripts/jquery-2.2.0.min.js"></script>
+    
+	    <!--Bypass the chrome error-->
+	    <script>
+	      $(document).bind('mobileinit', function () {
+	          $.mobile.pushStateEnabled = false;
+	      });
+	    </script>  
+		
+		<!-- Include the jQuery Mobile library -->
+		<script type="text/javascript" src="scripts/jquery.mobile-1.4.5.min.js"></script>
+		<!--Inlcude custome javascript file-->
+		<script type="text/javascript" src="scripts/display.js"></script>
+  </head>
+
+  <body onload="toggleTable()">
+    <div class="page">
+	    <div data-role=header class="header" data-theme="b">Electricity<br>Calculator</div>
+	    <div  data-role="content">
+	    	<div data-role="controlgroup">
+	    		<legend>Voltage(V):</legend>
+	    		<input type="range" name="Voltage" id="Voltage"
+	    			   value="0" min="0" max="1000" data-theme="a" step="10" />
+	    	</div>
+	    	<div data-role="controlgroup">
+	    		<legend>Lowest Resistence(&#8486;):</legend>
+	    		<input type="range" name="LowResistence" id="LowResistence"
+	    			   value="100" min="100" max="1000" data-theme="a" step="100" />
+	    	</div>
+	    	<div data-role="controlgroup">
+	    		<legend>Highest Resistence(&#8486;):</legend>
+	    		<input type="range" name="HighResistence" id="HighResistence" 
+	    			   value="100" min="100" max="1000" data-theme="a" step="100"/>
+	    	</div>
+	    	<div data-role="cotrolgroup">
+	    		<input type="button" class="display" onclick="display()"
+	    			   value="Display Results" data-theme="a"/>
+	    	</div>
+	    	<div data-role="controlgroup">
+	    		<table align="center" id="dataTable">
+	    		</table>	
+	    	</div>
+	    </div>
+
+		<div data-role=footer class="footer" data-theme="b">
+		    &copy; Developed by Methew Guda, 2016
+	    </div>
+    </div>  
+  </body>
+</html>
